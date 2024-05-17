@@ -294,3 +294,26 @@ nav {
 .explore__card a:hover {
   color: var(--secondary-color);
 }
+
+/* Contenedor de la sección de clases */
+.class__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Estilos de contenido de la sección de clases */
+.class__content {
+  padding: 2rem 0;
+}
+
+/* Estilos del encabezado de la sección de clases */
+.class__content .section__header {
+  text-align: left;
+  max-width: 400px;
+}
+
+.class__content p {
+  margin-bottom: 1.2rem;
+  color: var(--text-light);
+}
