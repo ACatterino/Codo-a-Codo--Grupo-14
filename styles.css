@@ -1,0 +1,230 @@
+/* Importa la fuente "Poppins" desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Definición de Colores en variables CSS :root */
+:root {
+  --primary-color: #111317; 
+  --primary-color-light: #1f2125;
+  --primary-color-extra-light: #35373b;
+  --secondary-color: #d8141b;
+  --secondary-color-dark: #be1422;
+  --text-light: #d1d5db;
+  --white: #ffffff;
+  --max-width: 1200px; /* Anchura máxima */
+}
+
+/* Estilos globales para padding, margin y box-sizing */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Contenedor de secciones */
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+/* Encabezado de sección */
+.section__header {
+  margin-bottom: 1rem;
+  font-size: 2.25rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--white);
+}
+/* Subtitulo de sección */
+.section__subheader {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  color: var(--text-light);
+}
+
+/* Botón */
+.btn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color-dark);
+}
+
+/* Estilos de imágenes */
+img {
+  width: 100%;
+  display: flex;
+}
+
+/* Estilos de enlaces */
+a {
+  text-decoration: none;
+}
+
+/* Estilos de fondo borroso */
+.bg__blur {
+  position: absolute;
+  box-shadow: 0 0 1000px 50px var(--secondary-color);
+  z-index: -1;
+}
+
+/* Estilos de body */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-color);
+}
+
+/* Estilos de la navegación */
+nav {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav__logo {
+  max-width: 150px;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Estilos de enlaces de navegación */
+.link a {
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: var(--white);
+}
+
+/* Efecto hover en enlaces de navegación */
+.link a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--secondary-color);
+  transition: 0.3s;
+}
+
+.link a:hover::after {
+  width: 50%;
+}
+
+/* Contenedor del encabezado */
+.header__container {
+  position: relative;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Texto de fondo en el encabezado */
+.header__container::before {
+  content: "POSITIVE";
+  position: absolute;
+  bottom: 5rem;
+  right: 20rem;
+  font-size: 10rem;
+  font-weight: 700;
+  line-height: 7rem;
+  color: var(--white);
+  opacity: 0.05;
+  z-index: -1;
+}
+
+/* Blur específico del encabezado */
+.header__blur {
+  bottom: 5rem;
+  right: 0;
+}
+
+/* Estilos de contenido del encabezado */
+.header__content h4 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.header__content h1 {
+  margin-bottom: 1rem;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 6rem;
+  color: var(--white);
+}
+
+/* Estilos específicos para span en h1 */
+.header__content h1 span {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px var(--white);
+}
+
+.header__content p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+/* Contenedor de imagen del encabezado */
+.header__image {
+  position: relative;
+}
+
+/* Texto de fondo en la imagen del encabezado */
+.header__image::before {
+  content: "STAY";
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  transform: translateX(-50%);
+  font-size: 8rem;
+  font-weight: 700;
+  line-height: 20rem;
+  color: var(--secondary-color);
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.header__image img {
+  max-width: 390px;
+  margin: auto;
+}
+
+/* Estilos del encabezado de la sección explorar */
+.explore__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Navegación en la sección explorar */
+.explore__nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+
+
