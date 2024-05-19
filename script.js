@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function saludarUsuario(){
     const nombreUsuario = document.querySelector("#nombreUsuario").value;
     const saludoUsuario = document.querySelector(".saludoUser");
@@ -46,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         calcularPase();
     });
 });
-=======
+
 function saludarUsuario(){
     const nombreUsuario = document.querySelector("#nombreUsuario").value;
     const saludoUsuario = document.querySelector(".saludoUser");
@@ -94,4 +93,4 @@ document.addEventListener('DOMContentLoaded', function() {
         calcularPase();
     });
 });
->>>>>>> 84b2e4b2c5032674efe74374d03193c2e561f693
+
