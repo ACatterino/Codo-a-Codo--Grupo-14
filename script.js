@@ -1,17 +1,26 @@
+let flag = 0;
+let nombreUsuario = "";
 function saludarUsuario(){
-    const nombreUsuario = document.querySelector("#nombreUsuario").value;
+    nombreUsuario = document.querySelector("#nombreUsuario").value;
     const saludoUsuario = document.querySelector(".saludoUser");
     saludoUsuario.innerHTML = "Hola " + nombreUsuario + ", selecciona los turnos que vas a entrenar esta semana: ";
+    flag++;
+    console.log(flag);   
  }
 
  function calcularPase(){
+    let diasSelects = document.getElementsByClassName("resaltar").length;
+    console.log(flag);
+    if (flag<=0 || nombreUsuario=="" || diasSelects <=0) {
+        alert("Debe ingresar un nombre o elegir horarios para reservar turnos");
+    }else{
      const pasediario = 1200;
      const paseSemanal = 5000;
      const paseMensual = 15000;
      let precioPase = 0;
      let tipoPase = "";
  
-     let diasSelects = document.getElementsByClassName("resaltar").length;
+     
      if (diasSelects >= 7 && diasSelects <= 15){
         precioPase = paseSemanal;
         tipoPase = "plan semanal";
@@ -24,6 +33,7 @@ function saludarUsuario(){
      }
 
      document.querySelector(".precioFinal").innerHTML="Reservaste " + diasSelects + " turno/s. El valor de tu pase es $" + precioPase + ". Accediste al " + tipoPase + ".";
+    }
  }
 
 
