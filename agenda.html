@@ -34,21 +34,30 @@
   <!-- Sección de encabezado -->
   <header class="section__container ">
     <!-- Contenido del encabezado -->
+    <div class="header__content">
     <span class="bg__blur"></span>
     <span class="bg__blur header__blur"></span>
+    <h1>TENEMOS UN PRESUPUESTO<span> PARA VOS</span></h1>
+    <p>
+      Nuestro plan de precios viene con varios niveles de membresía,
+      cada uno de ellos diseñado para satisfacer diferentes preferencias y
+      aspiraciones de acondicionamiento físico.
+    </p>
+  </div>
   </header>
+  
   <section id="agendaTurnos">
     <div class="col-12 form__agenda">
-      <div class="row">
+      <div class="ag_datosUsuario">
         <label for="nombre">Nombre para agendar su turno:  </label>
-        <input type="text" nombre="nombre" class="inputs__agenda" id="nombreUsuario"
-          placeholder="  Ingrese su nombre: ">
-        <button class="btn" id="saludar">Enviar</button>
+        <input type="text"   class="inputs__agenda" id="nombreUsuario" placeholder="  Ingrese su nombre "> 
+        <button class="btn visible" id="ag_enviarNombre" >Enviar</button>
+        <a class="btn ag_nueva_consulta noVisible" href="agenda.html" id="ag_NConsulta">Nueva consulta</a>
         <p class="saludoUser"></p>
       </div>
-      <div class="row agendaSemana" id="diasSemana">
+      <div class="row agendaSemana noVisible" id="diasSemana">
         <div>
-          <button class="btn btnDia">Domingo</button>
+          <button class=" btnDia" hidden>Domingo</button>
           <div class="horarios">
             <p>10:00</p>
             <p>11:00</p>
@@ -59,23 +68,7 @@
           </div>
         </div>
         <div>
-          <button class="btn btnDia">Lunes</button>
-          <div class="horarios">
-            <p>10:00</p>
-            <p>11:00</p>
-            <p>12:00</p>
-            <p>13:00</p>
-            <p>14:00</p>
-            <p>15:00</p>
-            <p>16:00</p>
-            <p>17:00</p>
-            <p>18:00</p>
-            <p>19:00</p>
-            <p>20:00</p>
-          </div>
-        </div>
-        <div>
-          <button class="btn btnDia">Martes</button>
+          <button class=" btnDia">Lunes</button>
           <div class="horarios">
             <p>10:00</p>
             <p>11:00</p>
@@ -91,7 +84,7 @@
           </div>
         </div>
         <div>
-          <button class="btn btnDia">Miércoles</button>
+          <button class=" btnDia">Martes</button>
           <div class="horarios">
             <p>10:00</p>
             <p>11:00</p>
@@ -107,7 +100,7 @@
           </div>
         </div>
         <div>
-          <button class="btn btnDia">Jueves</button>
+          <button class=" btnDia">Miércoles</button>
           <div class="horarios">
             <p>10:00</p>
             <p>11:00</p>
@@ -123,7 +116,7 @@
           </div>
         </div>
         <div>
-          <button class="btn btnDia">Viernes</button>
+          <button class=" btnDia">Jueves</button>
           <div class="horarios">
             <p>10:00</p>
             <p>11:00</p>
@@ -139,7 +132,23 @@
           </div>
         </div>
         <div>
-          <button class="btn btnDia">Sábado</button>
+          <button class=" btnDia">Viernes</button>
+          <div class="horarios">
+            <p>10:00</p>
+            <p>11:00</p>
+            <p>12:00</p>
+            <p>13:00</p>
+            <p>14:00</p>
+            <p>15:00</p>
+            <p>16:00</p>
+            <p>17:00</p>
+            <p>18:00</p>
+            <p>19:00</p>
+            <p>20:00</p>
+          </div>
+        </div>
+        <div>
+          <button class=" btnDia">Sábado</button>
           <div class="horarios">
             <p>10:00</p>
             <p>11:00</p>
@@ -151,8 +160,12 @@
         </div>
       </div>
     </div>
-    <button class="btn" id="reservaDias">Reservar turnos</button>
-    <p class="precioFinal"></p>
+      <button class="btn centrar noVisible" id="ag_reservaDias">Reservar turnos</button>
+    
+    
+    <div class="ag_precioFinal noVisible">
+      <p class="precioFinal "></p>
+    </div>
   </section>
   
 </body>

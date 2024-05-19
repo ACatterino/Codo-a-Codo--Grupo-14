@@ -82,6 +82,7 @@ a {
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--primary-color);
+  margin-bottom: 4rem;
 }
 
 /* Estilos de la navegación */
@@ -400,16 +401,17 @@ nav {
 
 .form__agenda{
   color: #fff;
-  margin-top: -5rem;
-  margin-left: 25%;
+  width: 80%;
+  margin: 0 auto;
 }
+
 
 .inputs__agenda{
   background-color: transparent;
   border-radius: 10px;
   color: #fff;
   height: 3rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 0 1rem;
   padding-left:1rem ;
 }
@@ -418,24 +420,56 @@ nav {
   margin-top: 20px;
   color: var(--white);
   text-align: center;
+  
 }
-
+.ag_precioFinal{
+  background-color: var(--primary-color-extra-light);
+  padding: 30px;
+  width: 50%;
+  border-radius: 3px;
+}
 .saludoUser{
   padding-top: 2rem;
   padding-left: 5rem;
 }
 
-.agendaSemana {
-  display: flex;
-  padding: 2rem;
+.agendaSemana {    
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 1rem;
   flex-wrap: wrap;
   gap: 10px;
+  border: 1px solid var(--secondary-color);
+  margin-top: 3rem;
 }
 
+/*hace visible un elemento*/
+.Visible{
+  visibility: visible;
+}
+
+/*hace invisible un elemento*/
+.noVisible{
+  visibility: hidden;
+}
+
+.ag_datosUsuario{
+  margin: 0 auto;
+}
+
+/*etiqueta parecida a un boton*/
 .btnDia {
   display: block;
-  margin-bottom: 10px;
+  margin: 0 auto 10px auto ;
   text-align: center;
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  width: 100%;
 }
 
 .horarios {
@@ -449,14 +483,18 @@ nav {
   cursor: pointer;
 } 
 
-#reservaDias{
-  margin-left: 45%;
+#ag_reservaDias{text-align: center;
 }
 
 .resaltar {
   color: #0f7e00;
 }
 
+/*Para centrar un elemento solo*/
+.centrar{
+  display: block;
+  margin: 1rem auto;
+}
 /*sección del contacto*/
 .section__contacto{
   color: var(--text-light);

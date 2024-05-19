@@ -1,9 +1,25 @@
 let flag = 0;
 let nombreUsuario = "";
+
 function saludarUsuario(){
     nombreUsuario = document.querySelector("#nombreUsuario").value;
     const saludoUsuario = document.querySelector(".saludoUser");
-    saludoUsuario.innerHTML = "Hola " + nombreUsuario + ", selecciona los turnos que vas a entrenar esta semana: ";
+    if(nombreUsuario.length>=2){
+        saludoUsuario.innerHTML = "Hola " + nombreUsuario + ", selecciona los turnos que vas a entrenar esta semana: ";
+        /*vuelve invisible ciertos elemento y hace invisibles otros*/
+        document.getElementById('ag_enviarNombre').classList.remove('visible');
+        document.getElementById('ag_enviarNombre').classList.add('noVisible');
+        document.getElementById('diasSemana').classList.remove('noVisible');
+        document.getElementById('diasSemana').classList.add('visible');
+        document.getElementById('ag_NConsulta').classList.remove('noVisible');
+        document.getElementById('ag_NConsulta').classList.add('visible');
+        document.getElementById('ag_reservaDias').classList.remove('noVisible');
+        document.getElementById('ag_reservaDias').classList.add('visible');
+        
+    }
+    else{
+        alert('Debes ingresar un nombre de usuario');
+    }
     flag++;
     console.log(flag);   
  }
@@ -31,17 +47,19 @@ function saludarUsuario(){
         precioPase = pasediario * diasSelects;
         tipoPase = "plan básico"
      }
-
+    document.querySelector(".ag_precioFinal").classList.remove('noVisible');
+     document.querySelector(".ag_precioFinal").classList.add('visible');
+     document.querySelector(".ag_precioFinal").classList.add('centrar');
      document.querySelector(".precioFinal").innerHTML="Reservaste " + diasSelects + " turno/s. El valor de tu pase es $" + precioPase + ". Accediste al " + tipoPase + ".";
+     
     }
  }
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('saludar').addEventListener('click', function() {
+    document.getElementById('ag_enviarNombre').addEventListener('click', function() {
         saludarUsuario();
     });
-
 
 
     //funcion para resaltar los horarios
@@ -53,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     //eventlistener para llamar a la funcion calcular pase
-    document.getElementById('reservaDias').addEventListener('click', function() {
+    document.getElementById('ag_reservaDias').addEventListener('click', function() {
         calcularPase();
     });
 });
@@ -66,9 +84,9 @@ function mensaje_contacto(){
     let celular = document.getElementById("ct_celular").value;
     let email = document.getElementById("ct_email").value;
 
+    /*valida los campos necesarios*/
     if (nombre.length>=3 && apellido.length>=3 &&mensaje.length>=3 && celular.length>=3 &&(email.length==0||emailValido(email))) {
-        
-    alert("Mensaje enviado!");
+        alert("Mensaje enviado!");
     }
     
 
