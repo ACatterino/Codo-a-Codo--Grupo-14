@@ -42,6 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
         saludarUsuario();
     });
 
+
+
     //funcion para resaltar los horarios
     const horariosP = document.querySelectorAll('.horarios p');
     horariosP.forEach(p => {
@@ -55,3 +57,24 @@ document.addEventListener('DOMContentLoaded', function() {
         calcularPase();
     });
 });
+
+/*Sección contacto*/
+function mensaje_contacto(){
+    let nombre = document.getElementById("ct_nombre").value;
+    let apellido = document.getElementById("ct_apellido").value;
+    let mensaje = document.getElementById("ct_mensaje").value;
+    let celular = document.getElementById("ct_celular").value;
+    let email = document.getElementById("ct_email").value;
+
+    if (nombre.length>=3 && apellido.length>=3 &&mensaje.length>=3 && celular.length>=3 &&(email.length==0||emailValido(email))) {
+        
+    alert("Mensaje enviado!");
+    }
+    
+
+}
+/*Valida que el correo tenga su expresión regular*/
+const emailValido = email => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+  
