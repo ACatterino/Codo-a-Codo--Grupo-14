@@ -411,8 +411,10 @@ nav {
   height: 2rem;
 }
 
-#agendaTurnos{
+.precioFinal{
+  margin-top: 20px;
   color: var(--white);
+  text-align: center;
 }
 
 .saludoUser{
