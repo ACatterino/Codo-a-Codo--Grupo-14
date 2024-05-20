@@ -21,7 +21,6 @@ function saludarUsuario(){
         alert('Debes ingresar un nombre de usuario');
     }
     flag++;
-    console.log(flag);   
  }
 
  function calcularPase(){
