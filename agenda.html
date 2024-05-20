@@ -46,18 +46,18 @@
   </div>
   </header>
   
-  <section id="agendaTurnos">
+  <section id="agendaTurnos" >
     <div class="col-12 form__agenda">
       <div class="ag_datosUsuario">
         <label for="nombre">Nombre para agendar su turno:  </label>
         <input type="text"   class="inputs__agenda" id="nombreUsuario" placeholder="  Ingrese su nombre "> 
-        <button class="btn visible" id="ag_enviarNombre" >Enviar</button>
-        <a class="btn ag_nueva_consulta noVisible" href="agenda.html" id="ag_NConsulta">Nueva consulta</a>
+        <button class="btn " id="ag_enviarNombre" >Enviar</button>
+        <a class="btn ag_nueva_consulta" hidden href="agenda.html" id="ag_NConsulta" >Nueva consulta</a>
         <p class="saludoUser"></p>
       </div>
-      <div class="row agendaSemana noVisible" id="diasSemana">
+      <div class="row agendaSemana"  id="diasSemana">
         <div>
-          <button class=" btnDia" hidden>Domingo</button>
+          <button class=" btnDia" >Domingo</button>
           <div class="horarios">
             <p>10:00</p>
             <p>11:00</p>
@@ -160,10 +160,10 @@
         </div>
       </div>
     </div>
-      <button class="btn centrar noVisible" id="ag_reservaDias">Reservar turnos</button>
+      <button class="btn centrar " hidden id="ag_reservaDias">Reservar turnos</button>
     
     
-    <div class="ag_precioFinal noVisible">
+    <div class="ag_precioFinal" hidden>
       <p class="precioFinal "></p>
     </div>
   </section>

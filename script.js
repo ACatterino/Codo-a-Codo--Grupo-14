@@ -2,19 +2,18 @@ let flag = 0;
 let nombreUsuario = "";
 
 function saludarUsuario(){
+    const enviarNombre=document.getElementById('ag_enviarNombre');
+    const nuevaConsulta=document.getElementById('ag_NConsulta');
+    const reservaDias=document.getElementById('ag_reservaDias');
+
     nombreUsuario = document.querySelector("#nombreUsuario").value;
     const saludoUsuario = document.querySelector(".saludoUser");
     if(nombreUsuario.length>=2){
         saludoUsuario.innerHTML = "Hola " + nombreUsuario + ", selecciona los turnos que vas a entrenar esta semana: ";
         /*vuelve invisible ciertos elemento y hace invisibles otros*/
-        document.getElementById('ag_enviarNombre').classList.remove('visible');
-        document.getElementById('ag_enviarNombre').classList.add('noVisible');
-        document.getElementById('diasSemana').classList.remove('noVisible');
-        document.getElementById('diasSemana').classList.add('visible');
-        document.getElementById('ag_NConsulta').classList.remove('noVisible');
-        document.getElementById('ag_NConsulta').classList.add('visible');
-        document.getElementById('ag_reservaDias').classList.remove('noVisible');
-        document.getElementById('ag_reservaDias').classList.add('visible');
+        ocultar(enviarNombre);
+        mostrar(nuevaConsulta);
+        mostrar(reservaDias);
         
     }
     else{
@@ -23,6 +22,14 @@ function saludarUsuario(){
     flag++;
     console.log(flag);   
  }
+
+ function ocultar(elemento){
+    elemento.hidden=true;
+ }
+ function mostrar(elemento){
+    elemento.hidden=false;
+ }
+
 
  function calcularPase(){
     let diasSelects = document.getElementsByClassName("resaltar").length;
@@ -47,10 +54,10 @@ function saludarUsuario(){
         precioPase = pasediario * diasSelects;
         tipoPase = "plan básico"
      }
-    document.querySelector(".ag_precioFinal").classList.remove('noVisible');
-     document.querySelector(".ag_precioFinal").classList.add('visible');
-     document.querySelector(".ag_precioFinal").classList.add('centrar');
-     document.querySelector(".precioFinal").innerHTML="Reservaste " + diasSelects + " turno/s. El valor de tu pase es $" + precioPase + ". Accediste al " + tipoPase + ".";
+     precioFinal=document.querySelector(".ag_precioFinal");
+     mostrar(precioFinal);
+     precioFinal.classList.add('centrar');
+     precioFinal.innerHTML="Reservaste " + diasSelects + " turno/s. El valor de tu pase es $" + precioPase + ". Accediste al " + tipoPase + ".";
      
     }
  }
