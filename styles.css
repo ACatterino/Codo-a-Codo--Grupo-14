@@ -96,6 +96,14 @@ nav {
   gap: 2rem;
 }
 
+.menu {
+  position: sticky;
+  top: 0;
+  background: #060606 15;
+  backdrop-filter: blur(10px);
+  z-index: 3;
+}
+
 .nav__logo {
   max-width: 150px;
 }

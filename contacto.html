@@ -15,7 +15,7 @@
 
 <body>
   <!-- Sección de navegación -->
-  <nav>
+  <nav class="menu">
     <!-- Logo de la navegación -->
     <div class="nav__logo">
       <a href="#"><img src="assets/logo.png" alt="logo" /></a>
@@ -48,25 +48,29 @@
           <legend>Completa tus datos</legend>
           <div class="contacto__campo">
               <label for="ct_nombre" class="">Nombre : </label>
-              <input id="ct_nombre" required minlength="3" class="" type="text" placeholder="">
+              <input id="ct_nombre" required minlength="3" class="" type="text" required placeholder="">
           </div>
           <div class="contacto__campo">
             <label for="ct_apellido" class="">Apellido : </label>
-            <input id="ct_apellido" required minlength="3" class="" type="text" placeholder="">
+            <input id="ct_apellido" required minlength="3" class="" type="text" required placeholder="">
           </div>
           <div class="contacto__campo contacto__gc100" >
             <label for="ct_celular" >Nro celular : </label>
-            <input id="ct_celular" required minlength="3" type="text" placeholder="">
+            <input id="ct_celular" required minlength="3" type="text" required placeholder="">
           </div>
           <div class="contacto__campo contacto__gc100">
             <label for="ct_email" >Email : </label>
-            <input id="ct_email"  type="email" placeholder="">
+            <input id="ct_email"  type="email" required placeholder="">
           </div>
           <div class="contacto__campo contacto__gc100">
             <label for="ct_mensaje" >Mensaje : </label>
             <textarea rows="10" minlength="3" id="ct_mensaje" required placeholder="Ingrese un mensaje"></textarea> 
           </div>
         </fieldset>
+        <p>
+          <label for="imageFile">Selecciona una imagen de perfil:</label>
+          <input type="file" id="imageFile" accept="image/*" required multiple />
+        </p> 
         <div class="contacto__btn">
             <button onclick="mensaje_contacto()" class="btn ">Enviar</button>
         </div>
