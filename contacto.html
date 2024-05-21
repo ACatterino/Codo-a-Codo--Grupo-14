@@ -46,33 +46,60 @@
       <form class="contacto__form">
         <fieldset class="contacto__fieldset">  
           <legend>Completa tus datos</legend>
+
           <div class="contacto__campo">
               <label for="ct_nombre" class="">Nombre : </label>
-              <input id="ct_nombre" required minlength="3" class="" type="text" required placeholder="">
+              <input id="ct_nombre"  minlength="3"  type="text" required >
           </div>
+
           <div class="contacto__campo">
             <label for="ct_apellido" class="">Apellido : </label>
-            <input id="ct_apellido" required minlength="3" class="" type="text" required placeholder="">
+            <input id="ct_apellido"  minlength="3" type="text" required >
           </div>
-          <div class="contacto__campo contacto__gc100" >
+          
+          <div class="contacto__campo " >
             <label for="ct_celular" >Nro celular : </label>
-            <input id="ct_celular" required minlength="3" type="text" required placeholder="">
+            <input id="ct_celular"  minlength="3" type="text" required >
           </div>
+          
+          <div class="contacto__campo--rb ">
+              <p>¿Tenes Whatapp?</p>
+              <input type="radio" name="contacto_wpp" id="ct_wpp_si" value="SI" checked> 
+              <label for="ct_wpp_si">Si tengo </label>
+              <br>
+              <input type="radio" name="contacto_wpp" id="ct_wpp_no" value="NO">
+              <label for="ct_wpp_no">No tengo </label>
+            </div>
+          
+          <div class="contacto__campo--select">
+            <label for="ct__select">¿Entrenabas con nosotros? : </label>
+            <select name="ct__select" >
+              <option value="value1" selected>No aún</option>
+              <option value="value2">Si, anteriormente</option>
+              <option value="value3">Si, aún entreno</option>
+            </select>
+          </div>
+
           <div class="contacto__campo contacto__gc100">
             <label for="ct_email" >Email : </label>
-            <input id="ct_email"  type="email" required placeholder="">
+            <input id="ct_email"  type="email" required >
           </div>
+          
           <div class="contacto__campo contacto__gc100">
             <label for="ct_mensaje" >Mensaje : </label>
             <textarea rows="10" minlength="3" id="ct_mensaje" required placeholder="Ingrese un mensaje"></textarea> 
           </div>
+          
+          <div class=" contacto__gc100">
+            <p>
+              <label for="imageFile">Selecciona una imagen de perfil:</label>
+              <input type="file" id="imageFile" accept="image/*" required multiple />
+            </p>  
+          </div>
         </fieldset>
-        <p>
-          <label for="imageFile">Selecciona una imagen de perfil:</label>
-          <input type="file" id="imageFile" accept="image/*" required multiple />
-        </p> 
+        
         <div class="contacto__btn">
-            <button onclick="mensaje_contacto()" class="btn ">Enviar</button>
+            <button type="submit" onclick="mensaje_contacto()" class="btn ">Enviar</button>
         </div>
       </form>
   </section>

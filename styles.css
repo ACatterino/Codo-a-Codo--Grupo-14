@@ -546,6 +546,12 @@ nav {
   margin-top: 1rem;
   width: 40%;
 }
+.contacto__campo--select select{
+  height: 2rem; background-color: var(--primary-color-extra-light);
+  border: none;
+  color: var(--white);
+  border-radius: 5px;
+}
 /*Fin seccion contacto*/
 
 
@@ -733,9 +739,13 @@ nav {
   }
   .form__agenda{
     width: 90%;
-  }}
-@media (min-width:1200px) {
-  .agendaSemana{
+  }
+  .contacto__fieldset{
+    display: flex;
+    flex-direction: column;
+  }
+  .contacto__form{
+    overflow: hidden;
   }
 }
 

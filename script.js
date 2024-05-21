@@ -10,7 +10,7 @@ function saludarUsuario(){
     const saludoUsuario = document.querySelector(".saludoUser");
     if(nombreUsuario.length>=2){
         saludoUsuario.innerHTML = "Hola " + nombreUsuario + ", selecciona los turnos que vas a entrenar esta semana: ";
-        /*vuelve invisible ciertos elemento y hace invisibles otros*/
+        /*vuelve invisible ciertos elementos y hace invisibles otros*/
         ocultar(enviarNombre);
         mostrar(nuevaConsulta);
         mostrar(reservaDias);
@@ -89,9 +89,10 @@ function mensaje_contacto(){
     let mensaje = document.getElementById("ct_mensaje").value;
     let celular = document.getElementById("ct_celular").value;
     let email = document.getElementById("ct_email").value;
+    let imagen = document.getElementById("imageFile").value;
 
     /*valida los campos necesarios*/
-    if (nombre.length>=3 && apellido.length>=3 &&mensaje.length>=3 && celular.length>=3 &&(email.length==0||emailValido(email))) {
+    if (nombre.length>=3 && apellido.length>=3 &&mensaje.length>=3 && celular.length>=3 &&(emailValido(email)&&imagen!="")) {
         alert("Mensaje enviado!");
     }
     
