@@ -45,6 +45,7 @@
 
 /* Botón */
 .btn {
+  font-family: "Poppins", sans-serif;
   padding: 1rem 2rem;
   outline: none;
   border: none;
@@ -54,10 +55,20 @@
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+  text-decoration: none; 
+  display: inline-block; 
+  text-align: center;
+  line-height: 1; 
+  vertical-align: middle; 
 }
+
 
 .btn:hover {
   background-color: var(--secondary-color-dark);
+}
+
+a.btn.price__btn {
+  color: var(--white);
 }
 
 /* Estilos de imágenes */
